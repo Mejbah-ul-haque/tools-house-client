@@ -1,7 +1,7 @@
 [
   {
     "_id": "1",
-    "name": "Reducers & Adapters",
+    "name": "Reducers",
     "img": "https://i.ibb.co/tLWQ2SM/tools1.webp",
     "description": "Adapters are used where the size of the connection device or cable gland is larger than, or equivalent to in size, to that of the conduit entry thread of the enclosure. Reducers are employed where the size of the connection device or cable gland is smaller to that of the conduit entry of the enclosure.",
     "minQuality":"50",
@@ -19,7 +19,7 @@
   },
   {
     "_id": "3",
-    "name": "Hacksaw Blades Kit",
+    "name": "Hacksaw Blades",
     "img": "https://i.ibb.co/GccJVtK/tools3.webp",
     "description": "The Hyper Tough 2-Piece Hacksaw Blades are made from Carbon Steel, and feature 24 teeth per inch. These blades are made for cutting non-ferrous metals, copper tubing and thin metals. This item features 2 pieces of 12-inch flexible blades. Perfect for the home improvement and DIY enthusiast.",
     "minQuality":"20",
@@ -28,7 +28,7 @@
   },
   {
     "_id": "4",
-    "name": "Cutting Pliers Set",
+    "name": "Cutting Pliers",
     "img": "https://i.ibb.co/hmZMNKk/tools4.webp",
     "description": "Tolsen pliers set includes 7inch combination pliers, 6inch long nose pliers and 6inch diagonal cutting pliers. Pliers set designed for grasping, bending and cutting. Those pliers made from forged steel, chrome nickel plated with PVC insulated handles. The handles have rubberized coating for better grip. Pliers can be used for electrical, manufacturing or mechanical work",
     "minQuality":"10",
@@ -46,7 +46,7 @@
   },
   {
     "_id": "6",
-    "name": "Hardware Starter kit",
+    "name": "Hardware Starter",
     "img": "https://i.ibb.co/Fm961vs/tools6.webp",
     "description": "Introducing the 8050 Disco Starter Kit. A great system for PBE or Warehouse Suppliers. What you will receive is the Top 200 most popular body shop items. Ready to sell in packaged bags with photos and description on each bag.",
     "minQuality":"15",

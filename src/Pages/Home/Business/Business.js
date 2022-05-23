@@ -4,7 +4,8 @@ import { faTools, faComment, faPeoplePulling, faDollar } from "@fortawesome/free
 
 const Business = () => {
 	return (
-		<div class="stats stats-vertical lg:stats-horizontal shadow">
+		<div className="container mx-auto">
+      <div class="stats stats-vertical lg:stats-horizontal shadow ">
 			<div class="stat">
       <div class="stat-title text-3xl mb-5"><FontAwesomeIcon icon={faPeoplePulling}></FontAwesomeIcon></div>
 				<div class="stat-value">1000+</div>
@@ -29,6 +30,7 @@ const Business = () => {
 			</div>
       
 		</div>
+    </div>
 	);
 };
 
