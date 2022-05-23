@@ -4,8 +4,7 @@ import Business from '../Business/Business';
 
 const Home = () => {
   return (
-    <div>
-      <t2>This is home</t2>
+    <div className="my-24">
       <Banner></Banner>
       <Business></Business>
     </div>
