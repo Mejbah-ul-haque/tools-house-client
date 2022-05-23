@@ -14,7 +14,7 @@ const Tools = () => {
   return (
     <div className="container my-24 mx-auto ">
       <h1>this is tools</h1>
-      <div className="grid grid-rows-1 grid-flow-col gap-8">
+      <div className="grid grid-rows-3 md:grid-rows-2 sm:grid-rows-1 grid-flow-col gap-8">
       {
         tools.slice(0, 3).map(tool =><Tool 
           key={tool._id}
