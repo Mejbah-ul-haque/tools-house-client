@@ -1,0 +1,56 @@
+[
+  {
+    "_id": "1",
+    "name": "Reducers & Adapters",
+    "img": "https://i.ibb.co/tLWQ2SM/tools1.webp",
+    "description": "Adapters are used where the size of the connection device or cable gland is larger than, or equivalent to in size, to that of the conduit entry thread of the enclosure. Reducers are employed where the size of the connection device or cable gland is smaller to that of the conduit entry of the enclosure.",
+    "minQuality":"50",
+    "availableQuality": "300",
+    "price": "30"
+  },
+  {
+    "_id": "2",
+    "name": "Spanner Set",
+    "img": "https://i.ibb.co/bQgqqxc/tools2.webp",
+    "description": "Excellent quality wrench with comfortable handle, strong grip, wide profile groove for easy knurl adjustment and easy-to-read, laser-etched measurement scale. For use in confined spaces.",
+    "minQuality":"30",
+    "availableQuality": "220",
+    "price": "60"
+  },
+  {
+    "_id": "3",
+    "name": "Hacksaw Blades Kit",
+    "img": "https://i.ibb.co/GccJVtK/tools3.webp",
+    "description": "The Hyper Tough 2-Piece Hacksaw Blades are made from Carbon Steel, and feature 24 teeth per inch. These blades are made for cutting non-ferrous metals, copper tubing and thin metals. This item features 2 pieces of 12-inch flexible blades. Perfect for the home improvement and DIY enthusiast.",
+    "minQuality":"20",
+    "availableQuality": "350",
+    "price": "50"
+  },
+  {
+    "_id": "4",
+    "name": "Cutting Pliers Set",
+    "img": "https://i.ibb.co/hmZMNKk/tools4.webp",
+    "description": "Tolsen pliers set includes 7inch combination pliers, 6inch long nose pliers and 6inch diagonal cutting pliers. Pliers set designed for grasping, bending and cutting. Those pliers made from forged steel, chrome nickel plated with PVC insulated handles. The handles have rubberized coating for better grip. Pliers can be used for electrical, manufacturing or mechanical work",
+    "minQuality":"10",
+    "availableQuality": "200",
+    "price": "70"
+  },
+  {
+    "_id": "5",
+    "name": "The Vise",
+    "img": "https://i.ibb.co/fXqh5M3/tools5.webp",
+    "description": "A vise, sometimes called the third hand, is an indispensable tool in the tool room or workshop. Vises are usually mounted on workbenches or similar firm supports to hold material in place. Most vises can be used for a wide variety of work.",
+    "minQuality":"40",
+    "availableQuality": "400",
+    "price": "25"
+  },
+  {
+    "_id": "6",
+    "name": "Hardware Starter kit",
+    "img": "https://i.ibb.co/Fm961vs/tools6.webp",
+    "description": "Introducing the 8050 Disco Starter Kit. A great system for PBE or Warehouse Suppliers. What you will receive is the Top 200 most popular body shop items. Ready to sell in packaged bags with photos and description on each bag.",
+    "minQuality":"15",
+    "availableQuality": "240",
+    "price": "35"
+  }
+]
