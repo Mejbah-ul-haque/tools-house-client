@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useTools from '../../../hooks/useTools';
 import Tool from '../Tool/Tool';
 
 const Tools = () => {
-  const [tools, setTools] = useState([]);
+  const [tools] = useTools([]);
   
-  useEffect(()=>{
-    fetch('tools.json')
-    .then(res => res.json())
-    .then(data => setTools(data));
-    
-  }, [])
-  
+
   return (
     <div className="container my-24 mx-auto ">
       <h1>this is tools</h1>
-      <div className="grid grid-rows-3 md:grid-rows-2 sm:grid-rows-1 grid-flow-col gap-8">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
       {
         tools.slice(0, 3).map(tool =><Tool 
           key={tool._id}
