@@ -1,0 +1,38 @@
+[
+  {
+      "_id": 1,
+      "name": "Kashem Mia",
+      "comment": "This tools is fantastic. I love it.",
+      "ratings": "5 star"
+  },
+  {
+      "_id": 2,
+      "name": "Abdus Sattar",
+      "comment": "Last month I did bought, it is very useful...",
+      "ratings": "3 star"
+  },
+  {
+      "_id": 3,
+      "name": "Keramot Ali",
+      "comment": "Price is not too high. I like it. any body can buy it.",
+      "ratings": "4 star"
+  },
+  {
+      "_id": 4,
+      "name": "John Carly",
+      "comment": "Great...!!! First time I gauss it might be not so good but it was not right. This ball is really good.",
+      "ratings": "5 star"
+  },
+  {
+      "_id": 5,
+      "name": "Tom Harison",
+      "comment": "My experience is excellent about this tools. I am really excited to buy this.",
+      "ratings": "5 star"
+  },
+  {
+      "_id": 6,
+      "name": "Steeve Smith",
+      "comment": "Ohh! It is a great tools.",
+      "ratings": "3 star"
+  }
+]

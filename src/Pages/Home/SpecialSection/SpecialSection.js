@@ -4,7 +4,7 @@ const SpecialSection = ({ special }) => {
 	const { name, pic, description } = special;
 	return (
 		<div className="">
-			<div className=" card w-96 bg-base-100 bg-primary">
+			<div className=" card w-96 bg-base-100">
 				<div className="mt-[100px">
         <figure>
 					<img className="rounded-full w-48 mt-[-20px] border-8 border-primary "
