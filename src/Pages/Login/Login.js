@@ -132,7 +132,7 @@ const Login = () => {
           </form>
           <p>
             <small>
-              New to Doctors Portal
+              New to Tools House
               <Link className="text-secondary" to="/signup">
                 {" "}
                 Create New Account
