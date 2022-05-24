@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import Business from '../Business/Business';
 import NewArrivals from '../NewArrivals/NewArrivals';
 import SpecialSections from '../SpecialSections/SpecialSections';
+import Reviews from '../Reviews/Reviews';
 
 import Tools from '../Tools/Tools';
 
@@ -12,6 +13,7 @@ const Home = () => {
       <Banner></Banner>
       <Business></Business>
       <Tools></Tools>
+      <Reviews></Reviews>
       <SpecialSections></SpecialSections>
       <NewArrivals></NewArrivals>
     </div>

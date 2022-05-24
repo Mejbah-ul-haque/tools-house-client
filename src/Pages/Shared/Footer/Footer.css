@@ -1,0 +1,10 @@
+.footer-link {
+    color: white;
+
+}
+
+.footer-link:hover {
+    background-color: white;
+    color: #003366;
+    font-weight: 600;
+}
