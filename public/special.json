@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1",
+    "name": "Instantiation",
+    "pic": "https://i.ibb.co/5nj2ZNz/s1.webp",
+    "description": "Everything is perfect for you. Experienced employees are repeatedly testing. All the tools will help a lot in human work. We offer no discounts on the quality of our tools."
+  },
+  {
+    "_id": "2",
+    "name": "Sanitary",
+    "pic": "https://i.ibb.co/LN19PQj/s2.webp",
+    "description": "We do not have any products that are harmful to health. We always check the quality of your product. You can do business by buying our products with confidence."
+  },
+  {
+    "_id": "3",
+    "name": "Products",
+    "pic": "https://i.ibb.co/yRCpKTm/s3.webp",
+    "description": "The quality of any of our products is very good. Some problems will be fixed quickly. Our assigned officers will resolve me in a timely manner."
+  }
+]

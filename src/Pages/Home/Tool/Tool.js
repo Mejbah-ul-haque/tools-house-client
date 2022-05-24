@@ -38,7 +38,7 @@ const Tool = ({ tool }) => {
 						</div>
 					</div>
 					<div>
-						<button class="btn btn-primary font-bold rounded-full hover:btn-accent px-10 mt-10">Buy Now</button>
+						<button className="btn btn-primary font-bold rounded-full hover:btn-accent px-10 mt-10">Buy Now</button>
 					</div>
 				</div>
 			</div>

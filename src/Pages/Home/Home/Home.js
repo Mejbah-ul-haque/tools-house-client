@@ -2,6 +2,8 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import Business from '../Business/Business';
 import NewArrivals from '../NewArrivals/NewArrivals';
+import SpecialSections from '../SpecialSections/SpecialSections';
+
 import Tools from '../Tools/Tools';
 
 const Home = () => {
@@ -10,6 +12,7 @@ const Home = () => {
       <Banner></Banner>
       <Business></Business>
       <Tools></Tools>
+      <SpecialSections></SpecialSections>
       <NewArrivals></NewArrivals>
     </div>
   );
