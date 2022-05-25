@@ -8,6 +8,9 @@ import Footer from './Pages/Shared/Footer/Footer';
 import NotFound from './Pages/NotFound/NotFound';
 import Login from './Pages/Login/Login';
 import Signup from './Pages/Login/Signup';
+import AllReviews from './Pages/AllReviews/AllReviews';
+import Purchase from './Pages/Purchase/Purchase';
+
 
 
 
@@ -18,8 +21,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="/purchase/:id" element={<Purchase></Purchase>}></Route>
+        
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
+        <Route path='/allreviews' element={<AllReviews></AllReviews>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

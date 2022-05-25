@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Tool = ({ tool }) => {
 	const { _id, name, img, description, minQuality, availableQuality, price } =
@@ -38,7 +39,11 @@ const Tool = ({ tool }) => {
 						</div>
 					</div>
 					<div>
-						<button className="btn btn-primary font-bold rounded-full hover:btn-accent px-10 mt-10">Buy Now</button>
+						<Link to={`/purchase/${tool._id}`}>
+							<button className="btn btn-primary font-bold rounded-full hover:btn-accent px-10 mt-10">
+								Buy Now
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>
