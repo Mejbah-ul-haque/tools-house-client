@@ -99,11 +99,11 @@ const Purchase = () => {
 							<div className="grid grid-cols-2 gap-10">
 								<div>
 									<label className="label"> <span className="label-text font-bold mt-2">Total Quantity</span></label>
-									<input type="number" name="quantity" placeholder="Total Quantity" className="input input-bordered font-bold input-primary w-full max-w-xs" />
+									<input type="number" name="quantity" placeholder="Qnty..." className="input input-bordered font-bold text-xl input-primary w-full max-w-xs" />
 								</div>
 								<div>
 									<label className="label"> <span className="label-text font-bold mt-2">Total Price</span></label>
-									<input type="number" name="price" placeholder="Total price" className="input input-bordered font-bold input-primary w-full max-w-xs" />
+									<input type="number" disabled name="price" placeholder="Total price" className="input input-bordered font-bold input-primary w-full max-w-xs" />
 								</div>
 								
 							</div>
@@ -112,9 +112,9 @@ const Purchase = () => {
 							<label className="label"> <span className="label-text font-bold mt-2">Email</span></label>
 							<input type="email" name="email" disabled value={user?.email || ""} className="font-bold input input-bordered input-primary w-full max-w-xs" />
 							<label className="label"> <span className="label-text font-bold mt-2">Phone</span></label>
-							<input type="text" name="phone" placeholder="Phone Number" className="input font-bold input-bordered input-primary w-full max-w-xs" />
+							<input type="text" name="phone" placeholder="Phone Number" required className="input font-bold input-bordered input-primary w-full max-w-xs" />
 							<label className="label"> <span className="label-text font-bold mt-2">Address</span></label>
-							<input type="text" name="address" placeholder="Type Your Address" className="font-bold input input-bordered input-primary w-full max-w-xs" />
+							<input type="text" name="address" placeholder="Type Your Address" required className="font-bold input input-bordered input-primary w-full max-w-xs" />
 								<input type="submit" value="Purchase" 
 								className="btn btn-primary font-bold input input-bordered  text-white  w-full max-w-xs mt-8 mb-3" />
 						
