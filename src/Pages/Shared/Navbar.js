@@ -89,3 +89,15 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+{/* <h2 className="text-xl font-bold mb-5">Please Confirm Order</h2>
+							<div className="grid grid-cols-2 gap-10">
+							<div>
+								<p className=" bg-primary text-white rounded-t-lg py-2">Minimum</p>
+								<p className="border-2 border-primary rounded-b-lg font-bold text-2xl text-red-500">{minQuantity}</p>
+							</div>
+							<div>
+								<p className=" bg-primary text-white rounded-t-lg py-2">Available</p>
+								<p className="border-2 border-primary rounded-b-lg font-bold text-2xl text-red-500">{availableQuantity}</p>
+							</div>
+							</div> */}

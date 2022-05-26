@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NewArrival = ({tool}) => {
-  const { _id, name, img, minQuality, availableQuality, price } =tool;
+  const { _id, name, img, minQuantity, availableQuantity, price } =tool;
   return (
     <div>
 			<div className="card bg-base-100 shadow-xl border border-secondary hover:border-primary">
@@ -22,13 +22,13 @@ const NewArrival = ({tool}) => {
 						<div className="">
 							Minimum:{" "}
 							<span className="badge badge-outline bg-red-500 text-white text-xl p-3 hover:bg-red-800">
-								{minQuality}
+								{minQuantity}
 							</span>
 						</div>
 						<div className="">
 							Available:{" "}
 							<span className="badge badge-outline bg-red-500 text-white text-xl p-3 hover:bg-red-800">
-								{availableQuality}
+								{availableQuantity}
 							</span>
 						</div>
 					</div>

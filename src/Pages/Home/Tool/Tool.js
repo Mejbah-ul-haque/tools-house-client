@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Tool = ({ tool }) => {
-	const { _id, name, img, description, minQuality, availableQuality, price } =
+	const { _id, name, img, description, minQuantity,  availableQuantity, price } =
 		tool;
 	return (
 		<div>
@@ -28,13 +28,13 @@ const Tool = ({ tool }) => {
 						<div className="">
 							Minimum:{" "}
 							<span className="badge badge-outline bg-red-500 text-white text-xl p-3 hover:bg-red-800">
-								{minQuality}
+								{minQuantity}
 							</span>
 						</div>
 						<div className="">
 							Available:{" "}
 							<span className="badge badge-outline bg-red-500 text-white text-xl p-3 hover:bg-red-800">
-								{availableQuality}
+								{ availableQuantity}
 							</span>
 						</div>
 					</div>
