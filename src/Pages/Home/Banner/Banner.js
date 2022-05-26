@@ -8,7 +8,7 @@ const Banner = () => {
     //   <img src={banner1} />
     // </div>
     <div className=" container text-center">
-      <div className="hero container banner-photo mx-auto" style={{background:`url(${banner1})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize:'cover'}}>
+      <div className="hero container border-2 border-[#999999] rounded-2xl banner-photo mx-auto" style={{background:`url(${banner1})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize:'cover'}}>
         <div className="hero-overlay bg-opacity-5"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md mb-48">

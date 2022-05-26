@@ -39,7 +39,7 @@ const Tool = ({ tool }) => {
 						</div>
 					</div>
 					<div>
-						<Link to={`/purchase/${tool._id}`}>
+						<Link to={`/service/${tool._id}`}>
 							<button className="btn btn-primary font-bold rounded-full hover:btn-accent px-10 mt-10">
 								Buy Now
 							</button>

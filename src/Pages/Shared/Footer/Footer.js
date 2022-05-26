@@ -6,7 +6,7 @@ import {
 	faEnvelope,
 	faClock,
 	faLocationDot,
-    faCheck
+  faCheck
 } from "@fortawesome/free-solid-svg-icons";
 import bankCard from "../../../assets/BankCard/bankCard.jpg";
 import "./Footer.css";

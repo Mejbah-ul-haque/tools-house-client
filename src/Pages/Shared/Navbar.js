@@ -40,7 +40,13 @@ const Navbar = () => {
 	return (
 		<div>
 			<div className="text-right container mx-auto mt-5">
+				<div>
+					
+				</div>
+				<div>
 				<small>Call us : 0000-12456 | Email : tools@house.com</small>
+				</div>
+				
 			</div>
 			<div className="bg-primary ">
 				<div className="navbar bg-primary container mx-auto text-white mt-5">
