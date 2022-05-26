@@ -30,11 +30,9 @@ const Purchase = () => {
 		const totalQuantity = parseInt(event.target.quantity.value);
 		const stockQuantity = parseInt(availableQuantity);
 		const previousQuantity = parseInt(minQuantity);
-		
 		if (loading) {
 			return <Loading></Loading>;
-		}
-		
+		}	
 		if(totalQuantity < previousQuantity){
 			alert('Please increase your Quantity');	
 			return;	
@@ -43,12 +41,12 @@ const Purchase = () => {
 			alert('Quantity in not available. Please decrease your quantity.');	
 			return;	
 		}
-	
+		const totalPrice = (parseInt(price)) * totalQuantity;
 
 		const purchaseData = {
 			toolsId: _id,
 			toolsName: name,
-			price: price,
+			price: totalPrice,
 			totalQuantity: totalQuantity,
 			userEmail: user.email,
 			userName: user.displayName,
@@ -98,8 +96,17 @@ const Purchase = () => {
 							</div>
 							<form onSubmit={handleSubmit}>
 						
-							<label className="label"> <span className="label-text font-bold mt-2">Total Quantity</span></label>
-							<input type="number" name="quantity" placeholder="Total Quantity" className="input input-bordered font-bold input-primary w-full max-w-xs" />
+							<div className="grid grid-cols-2 gap-10">
+								<div>
+									<label className="label"> <span className="label-text font-bold mt-2">Total Quantity</span></label>
+									<input type="number" name="quantity" placeholder="Total Quantity" className="input input-bordered font-bold input-primary w-full max-w-xs" />
+								</div>
+								<div>
+									<label className="label"> <span className="label-text font-bold mt-2">Total Price</span></label>
+									<input type="number" name="price" placeholder="Total price" className="input input-bordered font-bold input-primary w-full max-w-xs" />
+								</div>
+								
+							</div>
 							<label className="label"> <span className="label-text font-bold mt-2">Name</span></label>
 							<input type="text" name="name" disabled value={user?.displayName || ""} className="font-bold input input-bordered input-primary w-full max-w-xs" />
 							<label className="label"> <span className="label-text font-bold mt-2">Email</span></label>
