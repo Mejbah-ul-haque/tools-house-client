@@ -30,7 +30,7 @@ const Navbar = () => {
 			</li>
 			<li>
 			{user ? (
-          <button onClick={logout}>Sign Out</button>
+          <button onClick={logout} className="font-bold text-white btn btn-primary ">Sign Out</button>
         ) : (
           <Link to="/login">Login</Link>
         )}
@@ -70,7 +70,7 @@ const Navbar = () => {
 							</label>
 							<ul
 								tabIndex="0"
-								className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+								className="menu menu-compact dropdown-content text-primary font-bold mt-3 p-2 shadow bg-base-100 rounded-box w-52"
 							>
 								{menuItems}
 							</ul>
