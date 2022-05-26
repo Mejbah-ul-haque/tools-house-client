@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { useParams } from "react-router-dom";
 import auth from "../../firebase.init";
+import Loading from "../Shared/Loading";
 
 const Purchase = () => {
 	const { id } = useParams();
@@ -28,15 +29,19 @@ const Purchase = () => {
 		// const price = event.target.price.value;
 		const totalQuantity = event.target.quantity.value;
 		
+		if (loading) {
+			return <Loading></Loading>;
+		}
+		
 		if(totalQuantity < minQuantity){
 			alert('Please increase your Quantity');	
 			return;	
-		}
-		if(totalQuantity > availableQuantity){
-			alert('Quantity in not available. Please decrease your quantity.');	
-			return ;	
-		}
-
+		}		
+		// else if(totalQuantity > availableQuantity){
+		// 	alert('Quantity in not available. Please decrease your quantity.');	
+		// 	return;	
+		// }
+	
 
 		const purchaseData = {
 			toolsId: _id,
@@ -78,7 +83,7 @@ const Purchase = () => {
 					</div>
 					<div className="card border flex-shrink-0 w-full h-[750px] max-w-sm shadow-2xl bg-base-100">
 						<div className="card-body ">
-						<h2 className="text-xl font-bold mb-5">Please Confirm Order</h2>
+						<h2 className="text-xl mb-5">Please Confirm Your Order</h2>
 							<div className="grid grid-cols-2 gap-10">
 							<div>
 								<p className=" bg-primary text-white rounded-t-lg py-2">Minimum</p>

@@ -28,6 +28,9 @@ const Navbar = () => {
 			<li>
 				<Link to="about">Portfolio</Link>
 			</li>
+			{
+				user && <li><Link to="dashboard">Dashboard</Link></li>
+			}			
 			<li>
 			{user ? (
           <button onClick={logout} className="font-bold text-white btn btn-primary ">Sign Out</button>
