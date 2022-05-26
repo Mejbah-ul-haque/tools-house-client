@@ -22,25 +22,27 @@ const Purchase = () => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		const email = event.target.email.value;
-		const name = event.target.name.value;
-		const phone = event.target.phone.value;
-		const address = event.target.address.value;
+		// const email = event.target.email.value;
+		// const name = event.target.name.value;
+		// const phone = event.target.phone.value;
+		// const address = event.target.address.value;
 		// const price = event.target.price.value;
-		const totalQuantity = event.target.quantity.value;
+		const totalQuantity = parseInt(event.target.quantity.value);
+		const stockQuantity = parseInt(availableQuantity);
+		const previousQuantity = parseInt(minQuantity);
 		
 		if (loading) {
 			return <Loading></Loading>;
 		}
 		
-		if(totalQuantity < minQuantity){
+		if(totalQuantity < previousQuantity){
 			alert('Please increase your Quantity');	
 			return;	
 		}		
-		// else if(totalQuantity > availableQuantity){
-		// 	alert('Quantity in not available. Please decrease your quantity.');	
-		// 	return;	
-		// }
+		else if(totalQuantity > stockQuantity){
+			alert('Quantity in not available. Please decrease your quantity.');	
+			return;	
+		}
 	
 
 		const purchaseData = {
@@ -48,10 +50,10 @@ const Purchase = () => {
 			toolsName: name,
 			price: price,
 			totalQuantity: totalQuantity,
-			userEmail: email,
+			userEmail: user.email,
 			userName: user.displayName,
-			phone: phone,
-			address: address,	
+			phone: event.target.phone.value,
+			address: event.target.address.value,	
 		}
 		console.log(purchaseData);
 

@@ -85,6 +85,24 @@ const Navbar = () => {
 					<div className="navbar-center hidden lg:flex">
 						<ul className="menu menu-horizontal p-0">{menuItems}</ul>
 					</div>
+					<div className="navbar-end">
+					<label tabIndex="1" htmlFor="dashboard-sidebar" className="btn btn-ghost lg:hidden">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									className="h-5 w-5"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
+										d="M4 6h16M4 12h8m-8 6h16"
+									/>
+								</svg>
+							</label>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -93,14 +111,4 @@ const Navbar = () => {
 
 export default Navbar;
 
-{/* <h2 className="text-xl font-bold mb-5">Please Confirm Order</h2>
-							<div className="grid grid-cols-2 gap-10">
-							<div>
-								<p className=" bg-primary text-white rounded-t-lg py-2">Minimum</p>
-								<p className="border-2 border-primary rounded-b-lg font-bold text-2xl text-red-500">{minQuantity}</p>
-							</div>
-							<div>
-								<p className=" bg-primary text-white rounded-t-lg py-2">Available</p>
-								<p className="border-2 border-primary rounded-b-lg font-bold text-2xl text-red-500">{availableQuantity}</p>
-							</div>
-							</div> */}
+
