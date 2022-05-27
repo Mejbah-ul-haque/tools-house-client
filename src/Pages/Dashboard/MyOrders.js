@@ -17,8 +17,8 @@ const MyOrders = () => {
 	return (
 		<div className="container mx-auto">
 			<h2>My Orders: {products.length}</h2>
-			<div class="overflow-x-auto">
-				<table class="table w-full">
+			<div className="overflow-x-auto">
+				<table className="table w-full">
 					<thead>
 						<tr>
 							<th></th>
@@ -30,7 +30,7 @@ const MyOrders = () => {
 					</thead>
 					<tbody>
             {
-              products.map((p, index ) =><tr>
+              products.map((p, index ) =><tr key={index}>
                 <th>{index+1}</th>
                 <td>{p.userName}</td>
                 <td>{p.toolsName}</td>

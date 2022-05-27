@@ -10,7 +10,7 @@ const AllReviews = () => {
 			<ul>
 				<li className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 					{reviews.map((review) => (
-						<Review key={review.id} review={review}></Review>
+						<Review key={review._id} review={review}></Review>
 					))}
 				</li>
 			</ul>
