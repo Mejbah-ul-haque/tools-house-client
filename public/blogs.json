@@ -1,0 +1,38 @@
+[
+  {
+    "heading": "How will you improve the performance of a React Application?",
+    "description": "There are some unique optimizing techniques for improving react application. Using immutable data structure, function and stateless components, multiple chunk files, using production mode flag in webpack, dependency optimization, use react.fragments to avoid additional HTML element wrappers, avoid inline function definition in the render function, throttling and debouncing event action in javascript, avoid using index as a key for map, avoiding in initial states, spreading props on DOM elements, use reselect in Redux to avoid fregment re-render, Memoize React Components, CSS Animations Instead of JS Animations, Using a CDN, Using Web Workers for CPU Extensive Tasks etc.",
+    "img": "https://i.ibb.co/gwcL5y4/react1.jpg"
+    
+  },
+  {
+    "heading": "What are the different ways to manage a state in a React application?",
+    "description": "This is not a only way to manage react state as using useState. Maybe dozens of ways of managing each kind. But four main types of state such as Local state, Global state, Server state and URL state. Using local state can manage data one or another component. Data manage across multiple components in global state. Data comes from an external server that must be integrated with UI state in server state. Data exists on URLs including the pathname and query parameters, this is URL state. This state is manage quite easy to manage, usually through custom hooks.",
+    "img": "https://i.ibb.co/bF65GhC/react2.png"
+    
+  },
+  {
+    "heading": "How does prototypical inheritance work",
+    "description": "The prototypical inheritance is a wonderful feature for javascript developers. In this feature javascript used to add methods and properties in objects. An object can inherit the properties in this method and another objects methods. JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its prototype. prototypal inheritance model is more powerful than classic model.  All objects of javascript have a hidden prototype property that's either another object or null.",
+    "img": "https://i.ibb.co/zGznZpW/react3.png"
+    
+  },
+  {
+    "heading": "Why you do not set the state directly in React?",
+    "description": "We can't set the state directly in react, behind this story too long. I can try to explain some reasons. If you update it directly, calling the setState() afterward may just replace the update you made. When you directly update the state, it does not change this.state immediately. Instead, it creates a pending state transition, and accessing it after calling this method will only return the present value. You will lose control of the state across all components. That why we cannot set products = [...] instead of use the setProducts.",
+    "img": "https://i.ibb.co/m8Qwnmy/react4.png"
+    
+  },
+  {
+    "heading": "How will you implement a search to find products by name?",
+    "description": "In this situation I can use find() method to find products from an array of products by name. The find() method is used to find all the descendant elements of the selected element. This method finds the element in the DOM tree by traversing through the root to the leaf. It is search through all the child elements only. Its syntax is -: array.find(function(value, Index, array),thisValue).",
+    "img": "https://i.ibb.co/FmB5bvX/react5.webp"
+    
+  },
+  {
+    "heading": "What is a unit test? Why should write unit tests?",
+    "description": "Unit test is a software testing method. It is individual units of source code-sets of one or more computer program modules together with associated control data, usage procedures and operating procedures. unit testing involves testing individual components of the software program or application. Actually main purpose is that to check all the individual parts are working as intended. Unit testing significantly improves code quality. It helps developers to identify the smallest defects that might be present in the units before they go for integration testing. Unit testing helps identify all kinds of issues with the software at a very early stage. That's why should write unit test.",
+    "img": "https://i.ibb.co/Sc4zJgN/react6.jpg"
+    
+  },
+]
