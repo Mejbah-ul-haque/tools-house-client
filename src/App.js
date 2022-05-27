@@ -19,6 +19,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Blogs from './Pages/Blogs/Blogs';
 import BlogDetail from './Pages/BlogDetail/BlogDetail';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import AllOrders from './Pages/Dashboard/AllOrders';
 
 
 
@@ -30,18 +31,19 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="/service/:id" element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
-        <Route path="/dashboard" element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
+        <Route path="service/:id" element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
+        <Route path="dashboard" element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<MyReview></MyReview>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="orders" element={<AllOrders></AllOrders>}></Route>
         </Route>
         
-        <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/signup' element={<Signup></Signup>}></Route>
-        <Route path='/allreviews' element={<AllReviews></AllReviews>}></Route>
-        <Route path='/blog' element={<Blogs></Blogs>}></Route>
-        <Route path='/blog/:id' element={<BlogDetail></BlogDetail>}></Route>
+        <Route path='login' element={<Login></Login>}></Route>
+        <Route path='signup' element={<Signup></Signup>}></Route>
+        <Route path='allreviews' element={<AllReviews></AllReviews>}></Route>
+        <Route path='blog' element={<Blogs></Blogs>}></Route>
+        <Route path='blog/:id' element={<BlogDetail></BlogDetail>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
