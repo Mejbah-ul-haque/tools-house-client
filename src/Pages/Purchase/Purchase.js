@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 import Loading from "../Shared/Loading";
 
@@ -11,6 +12,10 @@ const Purchase = () => {
 	const [service, setService] = useState([]);
 	const { _id, name, img, description, minQuantity,  availableQuantity, price } =
 		service;
+			
+	const [prices, setPrices] = useState(0);
+	const [available, setAvailable] = useState(0);
+		
 
 	useEffect(() => {
 		fetch(`http://localhost:5000/service/${id}`)
@@ -22,14 +27,12 @@ const Purchase = () => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		// const email = event.target.email.value;
-		// const name = event.target.name.value;
-		// const phone = event.target.phone.value;
-		// const address = event.target.address.value;
-		// const price = event.target.price.value;
 		const totalQuantity = parseInt(event.target.quantity.value);
-		const stockQuantity = parseInt(availableQuantity);
+		
 		const previousQuantity = parseInt(minQuantity);
+		const stockQuantity = parseInt(availableQuantity);
+		const restQuantity = stockQuantity - totalQuantity;
+		setAvailable(restQuantity);
 		if (loading) {
 			return <Loading></Loading>;
 		}	
@@ -41,9 +44,11 @@ const Purchase = () => {
 			alert('Quantity in not available. Please decrease your quantity.');	
 			return;	
 		}
+		
 		const totalPrice = (parseInt(price)) * totalQuantity;
+		setPrices(totalPrice);
 
-		const purchaseData = {
+		const purchase = {
 			toolsId: _id,
 			toolsName: name,
 			price: totalPrice,
@@ -53,7 +58,24 @@ const Purchase = () => {
 			phone: event.target.phone.value,
 			address: event.target.address.value,	
 		}
-		console.log(purchaseData);
+		
+		fetch("http://localhost:5000/purchase", {
+			method: 'POST',
+			headers:{
+				'content-type': 'application/json'
+			},
+			body: JSON.stringify(purchase)
+		})
+		.then(res => res.json())
+		.then(data => {
+			if(data.success) {
+				toast(`successfully purchased ${data.purchase.toolsName} tools.`)
+			}
+			else {
+				toast.error(`Sorry!! You already purchased ${data.purchase.toolsName} tools.`)
+			}
+			
+		})
 
 	};
 	
@@ -103,7 +125,7 @@ const Purchase = () => {
 								</div>
 								<div>
 									<label className="label"> <span className="label-text font-bold mt-2">Total Price</span></label>
-									<input type="number" disabled name="price" placeholder="Total price" className="input input-bordered font-bold input-primary w-full max-w-xs" />
+									<input type="number" disabled name="price" value={prices} className="input input-bordered font-bold input-primary text-xl w-full max-w-xs" />
 								</div>
 								
 							</div>
