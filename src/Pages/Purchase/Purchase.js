@@ -12,6 +12,8 @@ const Purchase = () => {
 	const [service, setService] = useState([]);
 	const { _id, name, img, description, minQuantity,  availableQuantity, price } =
 		service;
+		
+	
 			
 	const [prices, setPrices] = useState(0);
 	const [available, setAvailable] = useState(0);
@@ -73,7 +75,8 @@ const Purchase = () => {
 		.then(res => res.json())
 		.then(data => {
 			if(data.success) {
-				toast(`successfully purchased ${data.purchase.toolsName} tools.`)
+				toast.success(`successfully purchased ${data.purchase.toolsName} tools.`)
+	
 			}
 			else {
 				toast.error(`Sorry!! You already purchased ${data.purchase.toolsName} tools.`)
