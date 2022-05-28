@@ -11,7 +11,7 @@ const MyOrders = () => {
 
 	useEffect(() => {
 		if (user) {
-			fetch(`http://localhost:5000/purchase?userEmail=${user.email}`, {
+			fetch(`https://evening-dawn-30046.herokuapp.com/purchase?userEmail=${user.email}`, {
 				method: "GET",
 				headers: {
 					authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -44,6 +44,8 @@ const MyOrders = () => {
 							<th>Tools</th>
 							<th>Quantity</th>
 							<th>Price</th>
+							<th>Pay</th>
+							<th>Delete</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -54,6 +56,8 @@ const MyOrders = () => {
 								<td>{p.toolsName}</td>
 								<td>{p.totalQuantity}</td>
 								<td className="font-bold">{p.price} tk.</td>
+								<td><button class="btn btn-xs">payment</button></td>
+								<td><button class="btn btn-xs">Delete</button></td>
 							</tr>
 						))}
 					</tbody>

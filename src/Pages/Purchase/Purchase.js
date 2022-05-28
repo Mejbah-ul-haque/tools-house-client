@@ -18,13 +18,13 @@ const Purchase = () => {
 		
 
 	useEffect(() => {
-		fetch(`http://localhost:5000/service/${id}`)
+		fetch(`https://evening-dawn-30046.herokuapp.com/service/${id}`)
 			.then((res) => res.json())
 			.then((data) => setService(data));
 	}, [id]);
 	
-	
 
+	
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		const totalQuantity = parseInt(event.target.quantity.value);
@@ -33,11 +33,15 @@ const Purchase = () => {
 		const stockQuantity = parseInt(availableQuantity);
 		const restQuantity = stockQuantity - totalQuantity;
 		setAvailable(restQuantity);
+		
+		
 		if (loading) {
 			return <Loading></Loading>;
 		}	
 		if(totalQuantity < previousQuantity){
+			
 			alert('Please increase your Quantity');	
+		
 			return;	
 		}		
 		else if(totalQuantity > stockQuantity){
@@ -59,7 +63,7 @@ const Purchase = () => {
 			address: event.target.address.value,	
 		}
 		
-		fetch("http://localhost:5000/purchase", {
+		fetch("https://evening-dawn-30046.herokuapp.com/purchase", {
 			method: 'POST',
 			headers:{
 				'content-type': 'application/json'
