@@ -13,7 +13,7 @@ const AddProduct = () => {
 	} = useForm();
 
 	const { data: services, isLoading } = useQuery("services", () =>
-		fetch("https://evening-dawn-30046.herokuapp.com/service").then((res) => res.json())
+		fetch("http://localhost:5000/service").then((res) => res.json())
 	);
   
   const imgStorageKey = "d2ed86d276998da67966121ea46a21d3";
@@ -39,7 +39,7 @@ const AddProduct = () => {
           availableQuantity: data.availableQuantity,
           img: img
         }
-        fetch('https://evening-dawn-30046.herokuapp.com/product', {
+        fetch('http://localhost:5000/product', {
           method: "POST",
           headers: {
             'content-type': 'application/json',

@@ -8,7 +8,7 @@ const BlogDetail = () => {
   console.log(heading);
   
   useEffect(() => {
-		fetch(`https://evening-dawn-30046.herokuapp.com/blog/${id}`)
+		fetch(`http://localhost:5000/blog/${id}`)
 			.then((res) => res.json())
 			.then((data) => setBlogDetail(data));
 	}, [id]);

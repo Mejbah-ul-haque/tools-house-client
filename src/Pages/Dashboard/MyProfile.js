@@ -15,10 +15,15 @@ const MyProfile = () => {
   };
   
 	return (
-		<div className="flex justify-center items-center mt-10">
+		<div className="grid grid-cols-1 lg:grid-cols-2">
+      <h2 className="text-center text-2xl">My Profile</h2>
+      <div>
+        <h2>My address</h2>
+      </div>
+      <div className="flex justify-center items-center mt-10">
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
-          <h2 className="text-center text-2xl">My Profile</h2>
+          
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-control w-full max-w-xs">
               <label className="label">
@@ -107,6 +112,7 @@ const MyProfile = () => {
           </form>
         </div>
       </div>
+    </div>
     </div>
 	);
 };

@@ -1,7 +1,65 @@
+/* import React, { useState } from 'react';
+import { useQuery } from 'react-query';
+import Loading from '../Shared/Loading';
+import DeleteProduct from './DeleteProduct';
+import OrderRow from './OrderRow';
+
+const MyOrders = () => {
+	const [deleteOrder, setDeleteOrder] = useState(null);
+	
+	const { data: products, isLoading, refetch } = useQuery("products", () =>fetch("http://localhost:5000/purchase", {
+			headers: {
+				authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+			},
+		}).then((res) => res.json())
+	);
+
+	if (isLoading) {
+		return <Loading></Loading>;
+	}
+	return (
+		<div>
+			<h2 className="text-2xl">MyOrders : {products?.length}</h2>
+			<div class="overflow-x-auto">
+				<table class="table w-full">
+					<thead>
+					<tr>
+							<th></th>
+							<th>Name</th>
+							<th>Tools</th>
+							<th>Quantity</th>
+							<th>Price</th>
+							<th>Pay</th>
+							<th>Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						{
+              products?.map((product, index) =><OrderRow key={product._id} index={index} product={product} refetch={refetch} setDeleteOrder={setDeleteOrder}></OrderRow>)
+            }
+					</tbody>
+				</table>
+			</div>
+			{
+        deleteOrder && <DeleteProduct deleteOrder={deleteOrder} refetch={refetch} setDeleteOrder={setDeleteOrder}></DeleteProduct>
+      }
+		</div>
+	);
+};
+
+export default MyOrders; */
+ 
+
+
+
+
+
+
+
 import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const MyOrders = () => {
@@ -11,7 +69,7 @@ const MyOrders = () => {
 
 	useEffect(() => {
 		if (user) {
-			fetch(`https://evening-dawn-30046.herokuapp.com/purchase?userEmail=${user.email}`, {
+			fetch(`http://localhost:5000/purchase?userEmail=${user.email}`, {
 				method: "GET",
 				headers: {
 					authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -55,8 +113,12 @@ const MyOrders = () => {
 								<td>{p.userName}</td>
 								<td>{p.toolsName}</td>
 								<td>{p.totalQuantity}</td>
-								<td className="font-bold">{p.price} tk.</td>
-								<td><button className="btn btn-xs">payment</button></td>
+								<td className="font-bold">{p.price}</td>
+								<td>
+									{(p.price && !p.paid) && <Link to={`/dashboard/payment/${p._id}`}><button className="btn btn-xs btn-success">pay</button></Link>}
+									{(p.price && p.paid) && <span className="text-success">paid</span>}
+								</td>
+								
 								<td><button className="btn btn-xs">Delete</button></td>
 							</tr>
 						))}

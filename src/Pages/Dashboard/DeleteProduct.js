@@ -1,11 +1,11 @@
-import React from "react";
-import { toast } from "react-toastify";
+/* import React from 'react';
+import { toast } from 'react-toastify';
 
-const DeleteConfirmModal = ({ deletingProduct, refetch, setDeletingProduct}) => {
-	const { name, id } = deletingProduct;
-
-	const handleDelete = () => {
-		fetch(`http://localhost:5000/product/${id}`, {
+const DeleteProduct = ({deleteOrder, refetch, setDeleteOrder}) => {
+  const {toolsName, id} =deleteOrder;
+  
+  const handleDelete = () => {
+		fetch(`http://localhost:5000/purchase/${id}`, {
 			method: "DELETE",
 			headers: {
 				authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -14,19 +14,19 @@ const DeleteConfirmModal = ({ deletingProduct, refetch, setDeletingProduct}) => 
 			.then((res) => res.json())
 			.then((data) => {
 				if (data.deletedCount > 0) {
-					toast.success(`${name} deleted`);
-					setDeletingProduct(null);
+					toast.success(`${toolsName} deleted`);
+					setDeleteOrder(null);
 					refetch();
 				}
 			});
 	};
-	return (
-		<div>
+  return (
+    <div>
 			<input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />
 			<div class="modal modal-bottom sm:modal-middle">
 				<div class="modal-box">
 					<h3 class="font-bold text-lg text-red-500">
-						Are you sure you want to delete {name}!
+						Are you sure you want to delete {toolsName}!
 					</h3>
 					<p class="py-4">
 					Once deleted, you will never find it again.!
@@ -45,7 +45,7 @@ const DeleteConfirmModal = ({ deletingProduct, refetch, setDeletingProduct}) => 
 				</div>
 			</div>
 		</div>
-	);
+  );
 };
 
-export default DeleteConfirmModal;
+export default DeleteProduct; */

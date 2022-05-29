@@ -13,7 +13,7 @@ const AddReview = () => {
 	} = useForm();
   
   const { data: services, isLoading } = useQuery("services", () =>
-		fetch("https://evening-dawn-30046.herokuapp.com/service").then((res) => res.json())
+		fetch("http://localhost:5000/service").then((res) => res.json())
 	);
   
   
@@ -25,7 +25,7 @@ const AddReview = () => {
       minQuantity: data.minQuantity,
       availableQuantity: data.availableQuantity,
     }
-    fetch('https://evening-dawn-30046.herokuapp.com/product', {
+    fetch('http://localhost:5000/product', {
       method: "POST",
       headers: {
         'content-type': 'application/json',

@@ -5,7 +5,7 @@ const useTools = () => {
 	
 
 	useEffect(() => {
-		fetch("https://evening-dawn-30046.herokuapp.com/service")
+		fetch("http://localhost:5000/service")
 			.then((res) => res.json())
 			.then((data) => setTools(data));
 	}, []);
