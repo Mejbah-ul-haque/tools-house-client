@@ -13,7 +13,7 @@ import Purchase from './Pages/Purchase/Purchase';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
-import MyReview from './Pages/Dashboard/MyReview';
+import AddReview from './Pages/Dashboard/AddReview';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Blogs from './Pages/Blogs/Blogs';
@@ -37,7 +37,7 @@ function App() {
         <Route path="service/:id" element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
         <Route path="dashboard" element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route index element={<MyOrders></MyOrders>}></Route>
-          <Route path="review" element={<MyReview></MyReview>}></Route>
+          <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
           <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path="addProduct" element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>

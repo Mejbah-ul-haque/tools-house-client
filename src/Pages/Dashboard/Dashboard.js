@@ -18,19 +18,19 @@ const Dashboard = () => {
 				<label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
 				<ul className="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
 					{/* <!-- Sidebar content here --> */}
-					<li>
+					<li className="bg-primary rounded-full text-white text-center hover:bg-accent">
 						<Link to="/dashboard">My Orders</Link>
 					</li>
-					<li>
-						<Link to="/dashboard/review">My Review</Link>
+					<li className="bg-primary rounded-full text-white text-center hover:bg-accent mt-2">
+						<Link to="/dashboard/review">Add Review</Link>
 					</li>
-					<li>
+					<li className="bg-primary rounded-full text-white text-center hover:bg-accent mt-2">
 						<Link to="/dashboard/profile">My Profile</Link>
 					</li>
 					{admin && <>
-							<li><Link to="/dashboard/users">Users</Link></li>
-							<li><Link to="/dashboard/addProduct">Add a Product</Link></li>
-							<li><Link to="/dashboard/manageProduct">Manage Products</Link></li>
+							<li className="bg-primary rounded-full text-white text-center mt-2 hover:bg-accent"><Link to="/dashboard/users">Make Admin</Link></li>
+							<li className="bg-primary rounded-full text-white text-center mt-2 hover:bg-accent"><Link to="/dashboard/addProduct">Add a Product</Link></li>
+							<li className="bg-primary rounded-full text-white text-center mt-2 hover:bg-accent"><Link to="/dashboard/manageProduct">Manage Products</Link></li>
 					</>}
 				</ul>
 			</div>

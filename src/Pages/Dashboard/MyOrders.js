@@ -56,8 +56,8 @@ const MyOrders = () => {
 								<td>{p.toolsName}</td>
 								<td>{p.totalQuantity}</td>
 								<td className="font-bold">{p.price} tk.</td>
-								<td><button class="btn btn-xs">payment</button></td>
-								<td><button class="btn btn-xs">Delete</button></td>
+								<td><button className="btn btn-xs">payment</button></td>
+								<td><button className="btn btn-xs">Delete</button></td>
 							</tr>
 						))}
 					</tbody>

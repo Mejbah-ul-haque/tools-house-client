@@ -13,7 +13,7 @@ const AddProduct = () => {
 	} = useForm();
 
 	const { data: services, isLoading } = useQuery("services", () =>
-		fetch("http://localhost:5000/service").then((res) => res.json())
+		fetch("https://evening-dawn-30046.herokuapp.com/service").then((res) => res.json())
 	);
   
   const imgStorageKey = "d2ed86d276998da67966121ea46a21d3";
@@ -39,7 +39,7 @@ const AddProduct = () => {
           availableQuantity: data.availableQuantity,
           img: img
         }
-        fetch('http://localhost:5000/product', {
+        fetch('https://evening-dawn-30046.herokuapp.com/product', {
           method: "POST",
           headers: {
             'content-type': 'application/json',
@@ -77,7 +77,7 @@ const AddProduct = () => {
 								<label className="label">
 									<span className="label-text">Product's Name</span>
 								</label>
-								<select {...register("name")} class="select select-primary w-full max-w-xs">
+								<select {...register("name")} className="select select-primary w-full max-w-xs">
                   {
                     services.map(service =><option
                     key={service._id}

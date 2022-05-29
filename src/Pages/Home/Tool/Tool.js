@@ -40,9 +40,9 @@ const Tool = ({ tool }) => {
 					</div>
 					<div>
 						<Link to={`/service/${tool._id}`}>
-							<button className="btn btn-primary font-bold rounded-full hover:btn-accent px-10 mt-10">
+							{<button className="btn btn-primary font-bold rounded-full hover:btn-accent px-10 mt-10">
 								Buy Now
-							</button>
+							</button>}
 						</Link>
 					</div>
 				</div>

@@ -6,6 +6,7 @@ import SpecialSections from '../SpecialSections/SpecialSections';
 import Reviews from '../Reviews/Reviews';
 
 import Tools from '../Tools/Tools';
+import Others from '../Others/Others';
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
       <Reviews></Reviews>
       <SpecialSections></SpecialSections>
       <NewArrivals></NewArrivals>
+      {/* <Others></Others> */}
+      
     </div>
   );
 };
