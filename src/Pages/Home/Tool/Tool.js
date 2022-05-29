@@ -2,8 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Tool = ({ tool }) => {
+	
+	
+	
 	const { _id, name, img, description, minQuantity,  availableQuantity, price } =
 		tool;
+		
 	return (
 		<div>
 			<div className="card bg-base-100 shadow-xl border border-accent hover:border-primary">
