@@ -1,61 +1,3 @@
-/* import React, { useState } from 'react';
-import { useQuery } from 'react-query';
-import Loading from '../Shared/Loading';
-import DeleteProduct from './DeleteProduct';
-import OrderRow from './OrderRow';
-
-const MyOrders = () => {
-	const [deleteOrder, setDeleteOrder] = useState(null);
-	
-	const { data: products, isLoading, refetch } = useQuery("products", () =>fetch("http://localhost:5000/purchase", {
-			headers: {
-				authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-			},
-		}).then((res) => res.json())
-	);
-
-	if (isLoading) {
-		return <Loading></Loading>;
-	}
-	return (
-		<div>
-			<h2 className="text-2xl">MyOrders : {products?.length}</h2>
-			<div class="overflow-x-auto">
-				<table class="table w-full">
-					<thead>
-					<tr>
-							<th></th>
-							<th>Name</th>
-							<th>Tools</th>
-							<th>Quantity</th>
-							<th>Price</th>
-							<th>Pay</th>
-							<th>Delete</th>
-						</tr>
-					</thead>
-					<tbody>
-						{
-              products?.map((product, index) =><OrderRow key={product._id} index={index} product={product} refetch={refetch} setDeleteOrder={setDeleteOrder}></OrderRow>)
-            }
-					</tbody>
-				</table>
-			</div>
-			{
-        deleteOrder && <DeleteProduct deleteOrder={deleteOrder} refetch={refetch} setDeleteOrder={setDeleteOrder}></DeleteProduct>
-      }
-		</div>
-	);
-};
-
-export default MyOrders; */
- 
-
-
-
-
-
-
-
 import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -64,8 +6,17 @@ import auth from "../../firebase.init";
 
 const MyOrders = () => {
 	const [products, setProducts] = useState([]);
+	const [payments, setPayments] = useState([]);
+	console.log(payments.transactionId);
+	
 	const [user] = useAuthState(auth);
 	const navigate = useNavigate();
+	
+	useEffect(()=>{
+		fetch('http://localhost:5000/payment')
+		.then(res => res.json())
+		.then(data => setPayments(data));
+	}, [])
 
 	useEffect(() => {
 		if (user) {
@@ -89,6 +40,24 @@ const MyOrders = () => {
 				});
 		}
 	}, [user]);
+	
+	const handleDelete = (email) => {
+		const proceed = window.confirm ('Are you sure you want to delete?');
+		if(proceed){
+			const url = `http://localhost:5000/purchase/${email}`;
+			fetch(url, {
+				method: 'DELETE'
+			})
+			.then(res => res.json())
+			.then(data => {
+				if(data.deletedCount > 0){
+					console.log('deleted success')
+					const remaining = products.filter(product => product._id !==email);
+					setProducts(remaining);
+				}
+			})
+		}
+	}
 
 	return (
 		<div className="container mx-auto">
@@ -103,7 +72,7 @@ const MyOrders = () => {
 							<th>Quantity</th>
 							<th>Price</th>
 							<th>Pay</th>
-							<th>Delete</th>
+							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -116,10 +85,13 @@ const MyOrders = () => {
 								<td className="font-bold">{p.price}</td>
 								<td>
 									{(p.price && !p.paid) && <Link to={`/dashboard/payment/${p._id}`}><button className="btn btn-xs btn-success">pay</button></Link>}
-									{(p.price && p.paid) && <span className="text-success">paid</span>}
+									{(p.price && p.paid) && <span className="text-success">Paid</span>}
 								</td>
 								
-								<td><button className="btn btn-xs">Delete</button></td>
+								<td>
+									{(!p.paid) && (<button onClick={handleDelete}  className="btn btn-xs btn-error">Delete</button>)}
+									{(p.paid) && (<span className="text-success">Successful</span>)}
+								</td>
 							</tr>
 						))}
 					</tbody>

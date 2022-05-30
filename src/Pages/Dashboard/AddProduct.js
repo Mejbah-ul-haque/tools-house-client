@@ -39,7 +39,7 @@ const AddProduct = () => {
           availableQuantity: data.availableQuantity,
           img: img
         }
-        fetch('http://localhost:5000/product', {
+        fetch('http://localhost:5000/service', {
           method: "POST",
           headers: {
             'content-type': 'application/json',

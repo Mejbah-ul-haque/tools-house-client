@@ -8,7 +8,7 @@ const ManageProducts = () => {
   const [deletingProduct, setDeletingProduct] = useState(null);
   
 	const { data: products, isLoading, refetch } = useQuery("products", () =>
-		fetch("http://localhost:5000/product", {
+		fetch("http://localhost:5000/service", {
 			headers: {
 				authorization: `Bearer ${localStorage.getItem("accessToken")}`,
 			},
