@@ -41,10 +41,10 @@ const MyOrders = () => {
 		}
 	}, [user]);
 	
-	const handleDelete = (email) => {
+	const handleDelete = (id) => {
 		const proceed = window.confirm ('Are you sure you want to delete?');
 		if(proceed){
-			const url = `http://localhost:5000/purchase/${email}`;
+			const url = `http://localhost:5000/purchase/${id}`;
 			fetch(url, {
 				method: 'DELETE'
 			})
@@ -52,7 +52,7 @@ const MyOrders = () => {
 			.then(data => {
 				if(data.deletedCount > 0){
 					console.log('deleted success')
-					const remaining = products.filter(product => product._id !==email);
+					const remaining = products.filter(product => product._id !==id);
 					setProducts(remaining);
 				}
 			})
@@ -89,7 +89,7 @@ const MyOrders = () => {
 								</td>
 								
 								<td>
-									{(!p.paid) && (<button onClick={handleDelete}  className="btn btn-xs btn-error">Unpaid</button>)}
+									{(!p.paid) && (<button onClick={()=>handleDelete(p._id)}  className="btn btn-xs btn-error">Cencel</button>)}
 									{(p.paid) && (<span className="text-success">Successful</span>)}
 								</td>
 							</tr>
