@@ -5,7 +5,7 @@ const useBlogs = () => {
 	
 
 	useEffect(() => {
-		fetch("http://localhost:5000/blog")
+		fetch("https://evening-dawn-30046.herokuapp.com/blog")
 			.then((res) => res.json())
 			.then((data) => setBlogs(data));
 	}, []);

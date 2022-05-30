@@ -13,14 +13,14 @@ const MyOrders = () => {
 	const navigate = useNavigate();
 	
 	useEffect(()=>{
-		fetch('http://localhost:5000/payment')
+		fetch('https://evening-dawn-30046.herokuapp.com/payment')
 		.then(res => res.json())
 		.then(data => setPayments(data));
 	}, [])
 
 	useEffect(() => {
 		if (user) {
-			fetch(`http://localhost:5000/purchase?userEmail=${user.email}`, {
+			fetch(`https://evening-dawn-30046.herokuapp.com/purchase?userEmail=${user.email}`, {
 				method: "GET",
 				headers: {
 					authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -44,7 +44,7 @@ const MyOrders = () => {
 	const handleDelete = (id) => {
 		const proceed = window.confirm ('Are you sure you want to delete?');
 		if(proceed){
-			const url = `http://localhost:5000/purchase/${id}`;
+			const url = `https://evening-dawn-30046.herokuapp.com/purchase/${id}`;
 			fetch(url, {
 				method: 'DELETE'
 			})

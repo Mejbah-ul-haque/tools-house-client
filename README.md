@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Project Name : Atafal Warehouse
+(the best electronics warehouse)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 1. Project Live Link : https://atafal-warehouse.web.app/
 
-In the project directory, you can run:
+## Atafal Warehouse [Live Link](https://atafal-warehouse.web.app/).
 
-### `npm start`
+## 2. Github Client Side Link : https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Mejbah-ul-haque
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ ## atafal-warehouse-client [Github Client Link](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Mejbah-ul-haque).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 3. Github Server Side Link : https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Mejbah-ul-haque
 
-### `npm test`
+ ## Atafal Warehouse [Github Server Link](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Mejbah-ul-haque).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 4. Stackoveflow Link : https://stackoverflow.com/questions/72159870/i-have-been-stuck-for-three-days-where-is-the-problem-why-code-not-going-to-mo
+ ## Stackoverflow [ Link](https://stackoverflow.com/questions/72159870/i-have-been-stuck-for-three-days-where-is-the-problem-why-code-not-going-to-mo).
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## I have done the following bellow...
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1.  A wonderful home page with responsive navbar, banner carousel, 6 items inventory section, realistic footer and  5 extra section. 
+2.  Add favicon and dynamic page title.
+3.  Total fours Firebase authentication implemented. Such as Email-password, Google Sign In, Github Sign In, Facebook.
+4. Password verification, 
+5. password reset option.
+6. Full responsive with navigation. Used Route, Private route, Dynamic route.
+7. use environment variable for password secret.
+8. Use gitignore file.
+9. 404, Not found page with a fenny picture.
+10. added category blog with all four Q/A.
+11. Create stack overflow profile.
+14. Use toast, Require Auth.
+15. Show error message.
+16. Use icon and fonts
+20. Framework/Library/App used : React.js, Nodejs, Express.js, Plain CSS, Bootstrap, React-Bootstrap, React hooks, Mongodb, Heroku, Firebase, imagebb.
