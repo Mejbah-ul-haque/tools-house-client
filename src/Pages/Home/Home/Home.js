@@ -17,7 +17,7 @@ const Home = () => {
       <Reviews></Reviews>
       <SpecialSections></SpecialSections>
       <NewArrivals></NewArrivals>
-      <Others></Others>
+      {/* <Others></Others> */}
       
     </div>
   );

@@ -89,7 +89,7 @@ const MyOrders = () => {
 								</td>
 								
 								<td>
-									{(!p.paid) && (<button onClick={handleDelete}  className="btn btn-xs btn-error">Delete</button>)}
+									{(!p.paid) && (<button onClick={handleDelete}  className="btn btn-xs btn-error">Unpaid</button>)}
 									{(p.paid) && (<span className="text-success">Successful</span>)}
 								</td>
 							</tr>
